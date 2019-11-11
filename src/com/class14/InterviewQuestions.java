@@ -10,6 +10,8 @@ public class InterviewQuestions {
 		//task1
 		//Write a program to swap 2 numbers without a temporary variable? 
 		//Swap 2 strings without a temporary variable?
+		
+		System.out.println("===TASK 1 ===");
 		int a = 10;
 		int b = 20;
 		
@@ -23,6 +25,8 @@ public class InterviewQuestions {
 		//Task2
 		//Write a java program to find the second largest number in the array? 
 		//Maximum and minimum number in the array?
+		
+		System.out.println("===TASK 2 ===");
 		
 		int[] array = {15, 11, 24, 44, 9, 14, 56, 30};
 		int max = array[0];
@@ -63,6 +67,7 @@ public class InterviewQuestions {
 		
 		//Task3
 		//Find out how many alpha characters present in a string?
+		System.out.println("===TASK 3 ===");
 		
 		String str = "HelloTrololo2239^&((!! Every day the same&*&_$$$$$";
 		String str1 = str.replaceAll("[^a-zA-Z]", "");
@@ -75,18 +80,19 @@ public class InterviewQuestions {
 		//Task4
 		//How to find out the part of the string from a string? 
 		//What is substring? Find number of words in string?
+		System.out.println("===TASK 4 ===");
 		
 		String str2 = "This is November and weather still great";
 		String[] array2 = str2.split(" ");
 		for(int i = 0; i < array2.length; i++) {
 			System.out.println(array2[i]);
-			System.out.println(array2.length);
 		}
-		
-		
+		System.out.println(array2.length);
 		
 		//Task5
 		//5. Write a java program to reverse String? Reverse a string word by word?
+		
+		System.out.println("===TASK 5 ===");
 		
 		//Part1: Write a java program to reverse String
 		String str3 = "This is November and weather still great";
@@ -112,20 +118,27 @@ public class InterviewQuestions {
 		//Task6 
 		//6. Write a Java Program to find whether a String is palindrome or not?
 		
+		System.out.println("===TASK 6 ===");
 		
-		String str4 = "repaper";
+		String str4 = "madam";
 		String rev = "";
 		String rev1 = "";
 		
 		for(int l = 0; l <= str4.length()/2; l++) {
 			rev = rev + str4.charAt(l);
 			
+			
 		}
 		
 		for(int l = str4.length()-1; l >= str4.length()/2; l--) {
 			rev1 = rev1 + str4.charAt(l);
+			
 		}
 		
+		//System.out.print(rev);
+		//System.out.println(" ");
+		//System.out.print(rev1);
+		//System.out.println(" ");
 		
 		if(rev1.equals(rev)) {
 			System.out.println("This is palindrome");
@@ -134,11 +147,24 @@ public class InterviewQuestions {
 		}
 		
 		
+		//Task 7 Assel
+		String original = "kayak";
+		String reversed = "";
 		
+		for(int i = original.length()-1; i >= 0; i--) {
+			reversed = reversed + original.charAt(i); 
+		}
+		System.out.println(reversed);
+		if(original.equals(reversed)) {
+			System.out.println("String is palindrome");
+		}else {
+			System.out.println("String is NOT palindrome");
+		}
 		
 		
 		//Task7
 		//Write a java program to check whether a given number is prime or not?
+		System.out.println("===TASK 7 ===");
 		
 		Scanner scan = new Scanner (System.in);
 		System.out.println("Enter the number::");
@@ -148,6 +174,7 @@ public class InterviewQuestions {
 		
 			boolean ifPrime = true;
 		
+			//check if number prime or not
 			for(int i = 2; i < x; i++) {
 				
 				if(x%i == 0) {
@@ -156,11 +183,10 @@ public class InterviewQuestions {
 					
 				}else {
 					ifPrime = true;
-					
-				}
-				
+				}	
 			}
 			
+			// result output
 			if (ifPrime == true) {
 				System.out.println("Prime");
 			}else {
@@ -171,6 +197,45 @@ public class InterviewQuestions {
 			System.err.println("None. Prime number can be more then 1");
 		}
 		
+		
+		
+		//Task 8 
+		//Write a Java Program to print first 10 numbers of Fibonacci series.
+		
+		
+		// 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,
+		//f0 f1 f2
+		
+		System.out.println("===TASK 8 ===");
+		
+		
+		int f0 = 1;
+		int f1 = 1;
+		int f2 = 0;
+		
+		System.out.print(f0 + " " + f1 + " ");
+		
+		for(int f = 3; f < 11; f++) {
+			
+			f2 = f0 + f1;
+			System.out.print(f2 + " ");
+			f0 = f1;
+			f1 = f2;
+		}
+		
+		//Task8 Assel
+		
+		int a1, b1, c1;
+		a1 = 0;
+		b1 = 1;
+		
+		for(int i = 0; a1 < 10; i++) {
+			System.out.print(a1 + " ");
+			c1 = a1 + b1;
+			a1 = b1;
+			b1 = c1;
+			
+		}
 		
 		
 	}
