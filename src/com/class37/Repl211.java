@@ -58,13 +58,30 @@ public class Repl211 {
 		//Storing map inside the list
 		dataList.add(orangeMap);
 		
-		System.out.println(dataList);
+		//System.out.println(dataList);
 		
-		//Step 7 use keySet
+		//find purchase price total
+		double totalPurchasePrice = 0;
 		
 		
+		for(Map<String, Object> map : dataList) {
+			String items = map.get("Items").toString();
+			//System.out.println(items);
+			double price = Double.parseDouble(map.get("Price").toString());
+			//System.out.println(price);
+			double quantity = Double.parseDouble(map.get("Quantity").toString());
+			//System.out.println(quantity);
+			double total = price * quantity;
+			//System.out.println(total);
+			
+			System.out.println("Items: " + items + " Quantity: " + quantity +
+					" SubTotal: " + total);
+			
+			totalPurchasePrice += total; 
+		}
 		
-
+		System.out.println("Your Purchase total : " + totalPurchasePrice);
+		
+		
 	}
-
 }

@@ -19,8 +19,8 @@ Ouptut:
 
 Number is less than 10
  */
-public class Task213 {
-	
+//public class Task213 {
+//	
 //	public void comparingNumber(int number) {
 //		if(number > 10) {
 //			System.out.println("Number is greater that 10");

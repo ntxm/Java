@@ -30,7 +30,7 @@ public class TestHS {
 		map.put("c", "c");
 		
 		System.out.println(map);
-		map.clear();
+		
 		System.out.println(map);
 		
 		
